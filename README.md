@@ -28,7 +28,7 @@ code blocks for commands
 
 ## Help
 
-Any advise for common problems or issues.
+Estoy seguro de que todos estamos familiarizados con estos filtros, ya que generalmente están disponibles en las cámaras de nuestros teléfonos inteligentes, por lo que ya no expondré lo que hace cada filtro. Destacaré cómo los filtros de enmascaramiento de nitidez y desenfoque de 5x5 pudieron mejorar la calidad de imagen de la imagen de entrada utilizada. Esto solo muestra las capacidades de los filtros convolucionales para manipular la información limitada disponible en las imágenes que se le proporcionan.
 ```
 command to run if program contains helper info
 ```
