@@ -9,7 +9,7 @@ I = numpy.asarray(I); # conversion numerica para poder operar de 0-1
 I = I / 255.0; # normalizacion 0 - 1
 
 
-
+#function que crea el padding de las imágenes a procesar
 def pad_with(vector, pad_width, iaxis, kwargs):
     pad_value = kwargs.get('padder', 10)
     vector[:pad_width[0]] = pad_value
@@ -29,8 +29,10 @@ J0 = ndimage.convolve(I, k0, mode='constant', cval=0.0)
 J1 = ndimage.convolve(I, k1, mode='constant', cval=0.0)
 J2 = ndimage.convolve(I, k2, mode='constant', cval=0.0)
 
+#Se créa el área en el cual se va a mostrar las imagenes
 plt.figure(figsize = (20,20))
 
+#Una vez creada el área se empiezan a ordenar y a mostrar las imágenes procesadas.
 plt.subplot(3,3,1)
 plt.imshow(Is)
 plt.xlabel('Input Image')
@@ -52,5 +54,5 @@ plt.imshow(J2)
 plt.xlabel('Este es reptido Vertical direction')
 
 
-#plt.grid(False)
-plt.show()
+#plt.grid(False) 
+plt.show() #Se muestra el área con imágenes trazadas
