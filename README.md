@@ -9,9 +9,9 @@ Simple overview of use/purpose.
 En pocas palabras, estas son matrices que se pueden aplicar a una imagen para aplicar efectos de imagen que se pueden realizar mediante la operación matemática conocida como convolución. Este es el proceso de agregar cada píxel de la imagen a sus vecinos locales, ponderados por el kernel.
 Los valores de un píxel en la imagen resultante se calculan multiplicando cada valor de núcleo por los correspondientes valores de píxel de la imagen de entrada. Este proceso se repite hasta que el kernel haya completado la iteración de esta multiplicación en la totalidad de la imagen de entrada.
 
-## Getting Started
+## Como Empezar
 
-### Dependencies
+### Dependencias
 
 * numpy
 * matplotlib
@@ -26,7 +26,7 @@ Los valores de un píxel en la imagen resultante se calculan multiplicando cada 
 ### Como Correr el programa
 
 * Abrir Main
-* Ejecturar el programa
+* Ejecutar el programa despues de cumplir con las dependencias
 ```
 code blocks for commands
 ```
