@@ -67,7 +67,6 @@ Aqui se lleva acabo una muestra del uso de padding donde se puede observar que e
 * Descargar el github
 * importar las librerias necesarias
 
-
 ### Como Correr el programa
 
 1. Agregar imagenes que quieras procesar dentor de la carpeta de Imagenes
@@ -80,6 +79,12 @@ Si quieres cambiar la imagen que es procesada edita el main.py en la linea 9 y c
 ```
 Is = Image.open('imagenes/mecaco.jpg');
 ```
+
+Si tienes problemas adicionales al llamar la imagen o al correr no encuentra tu ruta de la imagen puedes crear la imagen en la misma carpeta de programas y solo llamar el nombre de la imagen deseada.
+```
+Is = Image.open('mecaco.jpg');
+```
+
 
 # Github 
 El github fue llevado acabo atravez de 1 main y 3 branches con el nombre de cada integrante, cada integrante llevo acabo su parte en su branch, una vez el funcionamiento de esta fuera correcta se mergeo al main para su funcionamiento correcto y sin bugs
