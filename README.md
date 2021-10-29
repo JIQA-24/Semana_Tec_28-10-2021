@@ -1,6 +1,6 @@
-# Project Title
+# Procesador de imagens
 
-Simple overview of use/purpose.
+Este es un simple repositiorio en el cual procesamos imagenes y las pasamos a travez de una serie de filtros, adicionalmente se calificara nuestro uso de github como de las branches para poder llevar a cabo el proyecto.
 
 ## Descripcion
 
@@ -9,50 +9,94 @@ Simple overview of use/purpose.
 En pocas palabras, estas son matrices que se pueden aplicar a una imagen para aplicar efectos de imagen que se pueden realizar mediante la operación matemática conocida como convolución. Este es el proceso de agregar cada píxel de la imagen a sus vecinos locales, ponderados por el kernel.
 Los valores de un píxel en la imagen resultante se calculan multiplicando cada valor de núcleo por los correspondientes valores de píxel de la imagen de entrada. Este proceso se repite hasta que el kernel haya completado la iteración de esta multiplicación en la totalidad de la imagen de entrada.
 
-## Como Empezar
+## Pre-Procesamiento y Procesamiento
 
-### Dependencias
+### Convolución
+"Convolución es el tratamiento de una matriz por otra que se llama “kernel”. El filtro matriz de convolución usa una primera matriz que es la imagen que será tratada. La imagen es una colección bidimensional de píxeles en coordenada rectágular. El kernel usado depende del efecto deseado." [-Gimp](https://docs.gimp.org/2.6/es/plug-in-convmatrix.html)
 
+En este caso estamos ocupando la convolución para poder analizar y comprender los diferentes valor dentro de nuestra imagen.
+
+### Padding
+"La propiedad CSS padding establece el espacio de relleno requerido por todos los lados de un elemento. El área de padding es el espacio entre el contenido del elemento y su borde ( border ). No se permiten valores negativos." [-Developer Mozilla](https://developer.mozilla.org/es/docs/Web/CSS/padding)
+
+Por otro lado Padding es un metodo opcional que se puede ocupar para poder pre-procesar las imagenes agregandoles bordes a las imagenes para que al momento en que se apliquen los filtros la imagen no se vea recortada.
+
+## Kernels y filtros
+
+### Sobel
+El operador Sobel es utilizado en procesamiento de imágenes, especialmente en algoritmos de detección de bordes. Técnicamente es un operador diferencial discreto que calcula una aproximación al gradiente de la función de intensidad de una imagen. Para cada punto de la imagen a procesar, el resultado del operador Sobel es tanto el vector gradiente correspondiente como la norma de este vector.[De wikipedia](https://es.wikipedia.org/wiki/Operador_Sobel)
+
+### Emboss
+Emboss es una técnica de gráficos por computadora en la que cada píxel de una imagen se reemplaza por un resaltado o una sombra, dependiendo de los límites claros / oscuros de la imagen original. Las áreas de bajo contraste se reemplazan por un fondo gris. La imagen filtrada representará la tasa de cambio de color en cada ubicación de la imagen original. La aplicación de un filtro de relieve a una imagen a menudo da como resultado una imagen que se asemeja a un relieve de papel o metal de la imagen original, de ahí el nombre. [De wikipedia](https://en.wikipedia.org/wiki/Image_embossing)
+
+### sharpen
+Sharpen, que puede ayudar a enfatizar los detalles y mejorar los bordes de los objetos en una imagen, es fundamental cuando se procesan posteriormente muchos tipos de imágenes. Cabe aclarar que este proceso es muy sensible al ruido de las imagenes, es por esto que es recomendable siempre ocupar sharpen al final del procesamiento depsues de aclarar y limpiar la imagen. [-The Object](http://www.theobjects.com/dragonfly/dfhelp/4-0/Content/05_Image%20Processing/Sharpening%20Filters.htm#:~:text=The%20Unsharp%20filter%2C%20also%20called,defined%20in%20the%20original%20image.)
+
+## main
+
+El archivo main.py llama el archivo filtro.py el cual lleva acabo el procesamiento y filtros de las imagenes, la imagen es llamada atravez del main, recibe dichas imagenes y las plotea y enseña al usuario. -Divad Alejandro
+
+## Filtro
+
+Dentro de filtro se lleva acabo los kernels los cuales son aplicados a la imagen llamada en el main y las procesa, una vez que lleva acabo la funcion:
+* sobelh -Bruno Cruz
+* sobelb -Bruno Cruz
+* emboss -Bruno Cruz 
+* sharpen -Israel Quintero
+Al terminar se regresa las imagenes procesadas al archivo main
+
+## Padding
+Aqui se lleva acabo una muestra del uso de padding donde se puede observar que el contorno de la imagne no es cortado -Israel Quintero
+
+## Dependencies
 * numpy
 * matplotlib
 * scipy
-* Linux Operating system
+* PIL
 
-### Installing
+# Muestra Procesada
+
+![Muestra](https://media.discordapp.net/attachments/615977115296202773/903727054892191824/unknown.png)
+
+![Muestra2](https://media.discordapp.net/attachments/615977115296202773/903728553382805564/unknown.png)
+
+### Instalar
 
 * Descargar el github
+* importar las librerias necesarias
 
 
 ### Como Correr el programa
 
-* Abrir Main
-* Ejecutar el programa despues de cumplir con las dependencias
-```
-code blocks for commands
-```
+1. Agregar imagenes que quieras procesar dentor de la carpeta de Imagenes
+2. Abrir la consola del sistema y abrir la ruta hasta la carpeta de programas
+3. Correr el programa main.py o padding.py
 
 ## Help
 
-Estoy seguro de que todos estamos familiarizados con estos filtros, ya que generalmente están disponibles en las cámaras de nuestros teléfonos inteligentes, por lo que ya no expondré lo que hace cada filtro. 
-Esto solo muestra las capacidades de los filtros convolucionales para manipular la información limitada disponible en las imágenes que se le proporcionan.
+Si quieres cambiar la imagen que es procesada edita el main.py en la linea 9 y cambia el nombre de la imagen.
 ```
-command to run if program contains helper info
+Is = Image.open('imagenes/mecaco.jpg');
 ```
 
-## Authors
+## Autores
 
-Contributors names and contact info
+José Israel Quintero Alfaro 
+A01366686@tec.mx
+[Github](https://github.com/JIQA-24)
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Divad Alejandor Shriqui Garrón
+A01366907@tec.mx
+[Github](https://github.com/Shriqui1)
+
+Bruno Cruz Mendoza
+A01367102@tec.mx
+[Github](https://github.com/A01367102)
 
 
-
-## Acknowledgments
+## Fuentes
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Markdown guide](https://guides.github.com/features/mastering-markdown/)
+* [Padding](https://developer.mozilla.org/es/docs/Web/CSS/padding)
+* [Convolución](https://docs.gimp.org/2.6/es/plug-in-convmatrix.html)
