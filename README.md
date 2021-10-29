@@ -2,9 +2,12 @@
 
 Simple overview of use/purpose.
 
-## Description
+## Descripcion
 
-An in-depth paragraph about your project and overview of use.
+¿Qué es un filtro o un kernel?
+
+En pocas palabras, estas son matrices que se pueden aplicar a una imagen para aplicar efectos de imagen que se pueden realizar mediante la operación matemática conocida como convolución. Este es el proceso de agregar cada píxel de la imagen a sus vecinos locales, ponderados por el kernel.
+Los valores de un píxel en la imagen resultante se calculan multiplicando cada valor de núcleo por los correspondientes valores de píxel de la imagen de entrada. Este proceso se repite hasta que el kernel haya completado la iteración de esta multiplicación en la totalidad de la imagen de entrada.
 
 ## Getting Started
 
