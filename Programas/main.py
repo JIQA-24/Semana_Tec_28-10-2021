@@ -28,23 +28,23 @@ J3 = ndimage.convolve(I, k3, mode='constant', cval=0.0)
 
 plt.figure(figsize = (15,15))
 
-plt.subplot(2,2,1)
+plt.subplot(3,3,1)
 plt.imshow(Is)
 plt.xlabel('Imagen de entrada')
 
-plt.subplot(2,2,2)
+plt.subplot(3,3,2)
 plt.imshow(J0)
 plt.xlabel('Sobel Edge Horizontal')
 
-plt.subplot(2,2,3)
+plt.subplot(3,3,3)
 plt.imshow(J1)
 plt.xlabel('Sobel Edge Vertical')
 
-plt.subplot(2,2,4)
+plt.subplot(3,3,4)
 plt.imshow(J2)
 plt.xlabel('Emboss Filter')
 
-plt.subplot(2,2,5)
+plt.subplot(3,3,5)
 plt.imshow(J3)
 plt.xlabel('Sharpen Image')
 
