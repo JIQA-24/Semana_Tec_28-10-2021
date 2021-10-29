@@ -5,6 +5,7 @@ filtros.py
 Aqui van los kernel con los que hacermos los filtros
 """
 
+#chikri
 
 def sobelh():
 
@@ -26,5 +27,17 @@ def sobelv():
     -1 0 1
     -2 0 2
     -1 0 1
+    '''
+    return k
+
+#Brunichan
+
+def emboss():
+    k = numpy.array([[-2,-1,0],[-1,1,1],[0,1,2]])
+
+    '''
+    -2 -1 0
+    -1 1 1
+     0 1 2
     '''
     return k
