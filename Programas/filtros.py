@@ -51,3 +51,13 @@ def sharpen():
      0 -1  0
     '''
     return k
+
+def passf():
+    k = numpy.array([[0,-1,0],[-1,4,-1],[0,-1,0]])
+
+    '''
+     0 -1  0
+    -1  5 -1
+     0 -1  0
+    '''
+    return k
