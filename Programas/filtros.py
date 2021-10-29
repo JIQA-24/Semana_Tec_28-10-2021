@@ -41,3 +41,13 @@ def emboss():
      0 1 2
     '''
     return k
+
+def sharpen():
+    k = numpy.array([[0,-1,0],[-1,5,-1],[0,-1,0]])
+
+    '''
+    -2 -1 0
+    -1 1 1
+     0 1 2
+    '''
+    return k
