@@ -1,14 +1,18 @@
+#importar librerias y asignarlas
 import matplotlib.pyplot as plt
 import numpy
 from PIL import Image
 from scipy import ndimage
-
 from filtros import *
 
+#asignar variables y llamar a la imagen de entrada
+
 Is = Image.open('imagenes/capi.jpg');
-I = Is.convert('L');
-I = numpy.asarray(I);
-I = I / 255.0;
+I = Is.convert('L'); # se convierte a escala de grises
+I = numpy.asarray(I); # conversion numerica para poder operar de 0-1
+I = I / 255.0; # normalizacion 0 - 1
+
+#llamar de filtros.py y asignar un nombre
 
 k0 = sobelh()
 
@@ -20,6 +24,7 @@ k3 = sharpen()
 
 k4 = passf()
 
+#llama la operacion de convolve para realizar los despectivos kernels y filtros
 
 J0 = ndimage.convolve(I, k0, mode='constant', cval=0.0)
 J1 = ndimage.convolve(I, k1, mode='constant', cval=0.0)
@@ -27,6 +32,8 @@ J2 = ndimage.convolve(I, k2, mode='constant', cval=0.0)
 J3 = ndimage.convolve(I, k3, mode='constant', cval=0.0)
 J4 = ndimage.convolve(I, k4, mode='constant', cval=0.0)
 
+#Asigna un lugar para enseñar las imagenes y arregla el espacio entre cada una
+#Tambien asigna el nombre correspondiente a cada una de ellas
 
 plt.figure(figsize = (15,15))
 
