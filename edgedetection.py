@@ -1,10 +1,49 @@
-#son las 10
-def MexHat(sigma, K):
-    M =  numpy.zeros((K,K));
-    for x in range(0,5):
-        for y in range(0,K):
-            M[x,y] = 1/(pi*sigma**2) * ( 1-1-2*(x**2+y**2)/sigma**2) * numpy.exp(- (x**2+y**2)/(2*sigma**2))
+import matplotlib.pyplot as plt
+import numpy
+from PIL import Image
+from scipy import ndimage
 
-MexHat(sigma = 1, K = 5)
+Is = Image.open('capi.jpg');
+I = Is.convert('L');
+I = numpy.asarray(I);
+I = I / 255.0;
 
-print(M)
+k0 = numpy.array([[-1,-2,-1],[0,0,0],[1,2,1]])
+
+'''
+-1 -2 -1
+ 0 0 0 
+ 1 2 1
+'''
+
+k1 = numpy.array([[-1,0,1],[-2,0,2],[-1,0,1]])
+
+'''
+-1 0 1
+-2 0 2
+-1 0 1
+'''
+
+
+
+J0 = ndimage.convolve(I, k0, mode='constant', cval=0.0)
+J1 = ndimage.convolve(I, k1, mode='constant', cval=0.0)
+
+
+plt.figure(figsize = (15,15))
+
+plt.subplot(2,2,1)
+plt.imshow(Is)
+plt.xlabel('Imagen de entrada')
+
+plt.subplot(2,2,2)
+plt.imshow(J0)
+plt.xlabel('Sobel Edge Horizontal')
+
+plt.subplot(2,2,3)
+plt.imshow(J1)
+plt.xlabel('Sobel Edge Vertical')
+
+
+plt.grid(False)
+plt.show()
