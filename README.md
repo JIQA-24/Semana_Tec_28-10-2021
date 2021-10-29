@@ -43,6 +43,7 @@ Dentro de filtro se lleva acabo los kernels los cuales son aplicados a la imagen
 * sobelb -Divad Shriqui
 * emboss -Bruno Cruz 
 * sharpen -Bruno Cruz
+
 Al terminar se regresa las imagenes procesadas al archivo main
 
 ## Padding
