@@ -16,14 +16,11 @@ k1 = sobelv()
 
 k2 = emboss()
 
-k3 = sharpen()
-
 
 
 J0 = ndimage.convolve(I, k0, mode='constant', cval=0.0)
 J1 = ndimage.convolve(I, k1, mode='constant', cval=0.0)
 J2 = ndimage.convolve(I, k2, mode='constant', cval=0.0)
-J3 = ndimage.convolve(I, k3, mode='constant', cval=0.0)
 
 
 plt.figure(figsize = (15,15))
@@ -43,10 +40,6 @@ plt.xlabel('Sobel Edge Vertical')
 plt.subplot(2,2,4)
 plt.imshow(J2)
 plt.xlabel('Emboss Filter')
-
-plt.subplot(2,2,5)
-plt.imshow(J3)
-plt.xlabel('Sharpen Image')
 
 
 plt.grid(False)
