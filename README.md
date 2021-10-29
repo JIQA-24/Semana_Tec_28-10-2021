@@ -39,10 +39,11 @@ El archivo main.py llama el archivo filtro.py el cual lleva acabo el procesamien
 ## Filtro
 
 Dentro de filtro se lleva acabo los kernels los cuales son aplicados a la imagen llamada en el main y las procesa, una vez que lleva acabo la funcion:
-* sobelh -Divad Shriqui
-* sobelb -Divad Shriqui
-* emboss -Bruno Cruz 
+* sobelh  -Divad Shriqui
+* sobelb  -Divad Shriqui
+* emboss  -Bruno Cruz 
 * sharpen -Bruno Cruz
+* pass    -Bruno Cruz
 
 Al terminar se regresa las imagenes procesadas al archivo main
 
