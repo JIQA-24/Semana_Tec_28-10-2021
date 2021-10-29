@@ -54,5 +54,5 @@ plt.imshow(J2)
 plt.xlabel('Este es reptido Vertical direction')
 
 
-#plt.grid(False) 
+plt.grid(False) 
 plt.show() #Se muestra el área con imágenes trazadas
