@@ -39,14 +39,15 @@ El archivo main.py llama el archivo filtro.py el cual lleva acabo el procesamien
 ## Filtro
 
 Dentro de filtro se lleva acabo los kernels los cuales son aplicados a la imagen llamada en el main y las procesa, una vez que lleva acabo la funcion:
-* sobelh -Bruno Cruz
-* sobelb -Bruno Cruz
+* sobelh -Divad Shriqui
+* sobelb -Divad Shriqui
 * emboss -Bruno Cruz 
-* sharpen -Israel Quintero
+* sharpen -Bruno Cruz
 Al terminar se regresa las imagenes procesadas al archivo main
 
 ## Padding
-Aqui se lleva acabo una muestra del uso de padding donde se puede observar que el contorno de la imagne no es cortado -Israel Quintero
+Aqui se lleva acabo una muestra del uso de padding donde se puede observar que el contorno de la imagen no sea cortado al procesarse -Israel Quintero
+
 
 ## Dependencies
 * numpy
@@ -78,6 +79,13 @@ Si quieres cambiar la imagen que es procesada edita el main.py en la linea 9 y c
 ```
 Is = Image.open('imagenes/mecaco.jpg');
 ```
+
+# Github 
+El github fue llevado acabo atravez de 1 main y 3 branches con el nombre de cada integrante, cada integrante llevo acabo su parte en su branch, una vez el funcionamiento de esta fuera correcta se mergeo al main para su funcionamiento correcto y sin bugs
+
+## Readme.md
+Documentacion del proyecto y del github, branches creadas y mas. -Israel Quintero
+
 
 ## Autores
 
