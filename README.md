@@ -13,25 +13,28 @@ Los valores de un píxel en la imagen resultante se calculan multiplicando cada 
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* numpy
+* matplotlib
+* scipy
+* Linux Operating system
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Descargar el github
 
-### Executing program
 
-* How to run the program
-* Step-by-step bullets
+### Como Correr el programa
+
+* Abrir Main
+* Ejecturar el programa
 ```
 code blocks for commands
 ```
 
 ## Help
 
-Estoy seguro de que todos estamos familiarizados con estos filtros, ya que generalmente están disponibles en las cámaras de nuestros teléfonos inteligentes, por lo que ya no expondré lo que hace cada filtro. Destacaré cómo los filtros de enmascaramiento de nitidez y desenfoque de 5x5 pudieron mejorar la calidad de imagen de la imagen de entrada utilizada. Esto solo muestra las capacidades de los filtros convolucionales para manipular la información limitada disponible en las imágenes que se le proporcionan.
+Estoy seguro de que todos estamos familiarizados con estos filtros, ya que generalmente están disponibles en las cámaras de nuestros teléfonos inteligentes, por lo que ya no expondré lo que hace cada filtro. 
+Esto solo muestra las capacidades de los filtros convolucionales para manipular la información limitada disponible en las imágenes que se le proporcionan.
 ```
 command to run if program contains helper info
 ```
